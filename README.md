@@ -26,3 +26,6 @@ Works with both **Windows** and **WSL/Linux** paths.
 # Specific file
 ./sub_downloader.py "C:\Users\you\Videos\anime.mkv" jpn
 ```
+
+## Windows Context Menu Integration
+A sample .reg file is included to add this script to the Windows context menu (right-click inside a folder). Modify the paths in the file as needed.
