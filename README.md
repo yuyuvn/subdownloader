@@ -16,11 +16,13 @@ Works with both **Windows** and **WSL/Linux** paths.
 
 ## Usage
 ```bash
-./sub_downloader.py <movie_path> [language_code]
+./sub_downloader.py <movie_or_folder_path> [language_code]
 ```
 
 ## Example
 ```bash
-./sub_downloader.py "/mnt/c/Users/you/Videos/movie.mkv" eng
+# Scan whole folder
+./sub_downloader.py "/mnt/c/Users/you/Videos/" eng
+# Specific file
 ./sub_downloader.py "C:\Users\you\Videos\anime.mkv" jpn
 ```
