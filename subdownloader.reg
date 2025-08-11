@@ -2,12 +2,14 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\SubdownloaderEng]
 @="Subdownloader (English)"
+"Icon"="\\\\wsl.localhost\\Ubuntu\\home\\you\\projects\\subdownloader\\icon\\subdownloader.ico"
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\SubdownloaderEng\command]
 @="wsl /home/you/.pyenv/shims/python /home/you/projects/subdownloader/subdownloader.py \"%V\" eng"
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\SubdownloaderJpn]
 @="Subdownloader (Japanese)"
+"Icon"="\\\\wsl.localhost\\Ubuntu\\home\\you\\projects\\subdownloader\\icon\\subdownloader.ico"
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\SubdownloaderJpn\command]
 @="wsl /home/you/.pyenv/shims/python /home/you/projects/subdownloader/subdownloader.py \"%V\" jpn"

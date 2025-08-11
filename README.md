@@ -1,5 +1,9 @@
 # Subtitle Downloader & Sync Tool
 
+<p align="center">
+  <img src="./icon/subdownloader.png" alt="tool icon" width="256"/>
+</p>
+
 A Python script to **download** subtitles from [OpenSubtitles](https://www.opensubtitles.org/) and **sync** them with the video using [`ffsubsync`](https://github.com/smacke/ffsubsync).  
 Works with both **Windows** and **WSL/Linux** paths.
 
