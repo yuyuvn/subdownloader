@@ -21,8 +21,9 @@ Works with both **Windows** and **WSL/Linux** paths.
 ```
 
 ### Web
-```
+```bash
 BASE_PATH=/mnt/c/Users/you/Videos DEFAULT_LANG=eng web.py
+```
 
 ### Docker
 ```bash
