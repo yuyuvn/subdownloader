@@ -161,6 +161,7 @@ def submit():
         return redirect(url_for("index"))
 
 if __name__ == "__main__":
+    bind = os.environ.get("BIND", "0.0.0.0")
     port = int(os.environ.get("PORT", 5000))
-    print(f"Bind to http://localhost:{port}/")
-    app.run(debug=True, port=port)
+    print(f"Bind to http://{bind}:{port}/")
+    app.run(debug=True, port=port, host=bind)
