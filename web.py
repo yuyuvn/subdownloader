@@ -103,6 +103,37 @@ FORM_HTML = """
       font-size: 0.9em;
       margin-top: 30px;
     }
+    .flash {
+      padding: 12px 16px;
+      margin-bottom: 18px;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      border: 1px solid transparent;
+      display: block;
+    }
+    .flash-success {
+      background-color: #e6fffa;
+      color: #276749;
+      border-color: #b2f5ea;
+    }
+    .flash-error, .flash-danger {
+      background-color: #fff5f5;
+      color: #c53030;
+      border-color: #feb2b2;
+    }
+    .flash-warning {
+      background-color: #fefcbf;
+      color: #b7791f;
+      border-color: #faf089;
+    }
+    .flash-info {
+      background-color: #ebf8ff;
+      color: #2b6cb0;
+      border-color: #bee3f8;
+    }
   </style>
 </head>
 <body>
