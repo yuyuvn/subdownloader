@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import os
-from flask import Flask, request, render_template_string, redirect, url_for, flash
+from flask import Flask, request, render_template_string, redirect, url_for, flash, get_flashed_messages
 
 app = Flask(__name__)
 
@@ -107,6 +107,15 @@ FORM_HTML = """
 </head>
 <body>
   <div class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div>
+          {% for category, message in messages %}
+            <div class="flash flash-{{ category }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
     <h1>🎬 Subtitle Downloader</h1>
     <form method="post" action="{{ url_for('submit') }}">
       <label for="filename">Video File Name (relative to base folder):</label>
