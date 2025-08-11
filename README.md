@@ -11,12 +11,23 @@ Works with both **Windows** and **WSL/Linux** paths.
 - `ffmpeg` and `ffprobe` in PATH
 - Python packages:
   ```bash
-  pip install subliminal babelfish dogpile.cache ffsubsync
+  pip install -r requirements.txt
   ```
 
 ## Usage
+### CLI
 ```bash
 ./sub_downloader.py <movie_or_folder_path> [language_code]
+```
+
+### Web
+```
+BASE_PATH=/mnt/c/Users/you/Videos DEFAULT_LANG=eng web.py
+
+### Docker
+```bash
+docker build . -t subdownloader:latest
+docker run --rm -it subdownloader:latest -e BASE_PATH=/mnt/c/Users/you/Videos -e DEFAULT_LANG=eng -p 5000:5000
 ```
 
 ## Example
