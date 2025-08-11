@@ -164,4 +164,7 @@ if __name__ == "__main__":
     bind = os.environ.get("BIND", "0.0.0.0")
     port = int(os.environ.get("PORT", 5000))
     print(f"Bind to http://{bind}:{port}/")
+    app.secret_key = os.environ.get("SECRET_KEY", "random_secret_key")
+    app.config['SESSION_TYPE'] = 'filesystem'
+    app.config['SESSION_FILE_DIR'] = os.environ.get("SESSION_FILE_DIR", "/tmp/sessions")
     app.run(debug=True, port=port, host=bind)

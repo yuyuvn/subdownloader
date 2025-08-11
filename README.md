@@ -28,7 +28,7 @@ BASE_PATH=/mnt/c/Users/you/Videos DEFAULT_LANG=eng web.py
 ### Docker
 ```bash
 docker build . -t subdownloader:latest
-docker run --rm -it subdownloader:latest -e BASE_PATH=/mnt/c/Users/you/Videos -e DEFAULT_LANG=eng -p 5000:5000
+docker run --rm -it subdownloader:latest -e BASE_PATH=/movies -e DEFAULT_LANG=eng -e SECRET_KEY=random_secret_key SESSION_FILE_DIR=/tmp -p 5000:5000 -v /mnt/c/Users/you/Videos:/movies
 ```
 
 ## Example
