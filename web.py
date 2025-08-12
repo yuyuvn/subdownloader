@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import os
-from flask import Flask, request, render_template_string, redirect, url_for, flash, get_flashed_messages
+from flask import Flask, request, render_template_string, redirect, url_for, flash, get_flashed_messages, send_from_directory
 
 app = Flask(__name__)
 
@@ -31,6 +31,7 @@ FORM_HTML = """
   <meta charset="utf-8">
   <title>Subtitle Downloader</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('favicon') }}">
   <style>
     body {
       background: #f7f7fa;
@@ -172,6 +173,15 @@ FORM_HTML = """
 </body>
 </html>
 """
+
+# Serve favicon from icon/subdownloader.ico
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(
+        os.path.join(app.root_path, 'icon'),
+        'subdownloader.ico',
+        mimetype='image/vnd.microsoft.icon'
+    )
 
 @app.route("/", methods=["GET"])
 def index():
