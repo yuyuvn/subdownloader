@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+from pathlib import Path
 from flask import Flask, request, render_template_string, redirect, url_for, flash, get_flashed_messages, send_from_directory
 
 app = Flask(__name__)
@@ -198,9 +199,10 @@ def submit():
     # Call subdownloader.py with filename and lang
     import subprocess
     try:
-        print(f"Call python subdownloader.py \"{base_path}/{filename}\" \"{lang}\"")
+        filepath = Path(base_path) / str((Path("/") / filename).resolve()).lstrip("/")
+        print(f"Call python subdownloader.py \"{filepath}\" \"{lang}\"")
         result = subprocess.run(
-            ["python", "subdownloader.py", f"{base_path}/{filename}", lang],
+            ["python", "subdownloader.py", filepath, lang],
             capture_output=True, text=True, check=True
         )
         output = result.stdout
